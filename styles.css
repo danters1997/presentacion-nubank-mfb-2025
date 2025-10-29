@@ -1,0 +1,130 @@
+:root {
+    --nu-purple: #820AD1;
+    --nu-dark-purple: #61079E;
+    --background-color: #f0f0f7;
+    --text-color: #111111;
+    --card-background: #ffffff;
+    --footer-text: #666;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.main-header {
+    background-color: var(--card-background);
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.main-header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.main-header nav a {
+    color: var(--nu-purple);
+    text-decoration: none;
+    font-weight: 700;
+    margin-right: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.main-header nav a:hover {
+    color: var(--nu-dark-purple);
+}
+
+main {
+    padding-top: 80px; /* Adjust based on header height */
+}
+
+.content-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+}
+
+.card {
+    background-color: var(--card-background);
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    max-width: 800px;
+    width: 100%;
+}
+
+.section-supertitle {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--nu-purple);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.card h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+}
+
+.card p {
+    font-size: 1.1rem;
+}
+
+.main-footer-credits {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: var(--footer-text);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        padding: 0.5rem 1rem;
+    }
+
+    .main-header nav {
+        padding: 0.5rem 0;
+    }
+
+    .main-header nav a {
+        margin: 0 0.5rem;
+    }
+
+    main {
+        padding-top: 100px; /* Adjust for taller header */
+    }
+
+    .content-section {
+        padding: 2rem 1rem;
+    }
+
+    .card h1 {
+        font-size: 2rem;
+    }
+}
