@@ -52,4 +52,49 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // --- Panorama Section Chart ---
+    const ctx = document.getElementById('mexicoGrowthChart');
+    if (ctx) {
+        Chart.register(ChartDataLabels);
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['1T20', '4T20', '4T21', '4T22', '4T23', '4T24', '2T25', '3T25'],
+                datasets: [{
+                    label: 'Millones de Usuarios en México',
+                    data: [0.0, 1.0, 1.4, 3.2, 5.2, 10.0, 12.0, 13.0],
+                    fill: true,
+                    backgroundColor: 'rgba(130, 10, 209, 0.1)',
+                    borderColor: 'rgba(130, 10, 209, 1)',
+                    tension: 0.4,
+                    pointBackgroundColor: 'rgba(130, 10, 209, 1)',
+                    pointRadius: 5
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    datalabels: {
+                        anchor: 'end',
+                        align: function(context) {
+                            // For the last data point, align left to prevent clipping
+                            return context.dataIndex === context.dataset.data.length - 1 ? 'left' : 'top';
+                        },
+                        offset: 4,
+                        color: 'rgba(130, 10, 209, 1)',
+                        font: {
+                            weight: 'bold'
+                        },
+                        formatter: function(value) {
+                            return value + 'M';
+                        }
+                    }
+                }
+            }
+        });
+    }
 });

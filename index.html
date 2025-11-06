@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
 </head>
 <body>
 
@@ -126,7 +128,82 @@
             <div class="card">
                 <span class="section-supertitle">Integrante 2</span>
                 <h1>El Panorama Actual (Global y Local)</h1>
-                <p>Aquí va el contenido sobre estadísticas clave, presencia en Brasil, Colombia y el crecimiento específico en México.</p>
+
+                <div class="info-section">
+                    <h2>Top 5 Bancos Digitales por Usuarios (Global)</h2>
+                    <div class="bar-chart-container">
+                        <div class="bar-item"><span class="bar-label">Alipay</span><div class="bar" style="width: 100%; animation-delay: 0.1s;"><span class="bar-value">&gt; 1.000 M</span></div></div>
+                        <div class="bar-item"><span class="bar-label">WeBank</span><div class="bar" style="width: 44%; animation-delay: 0.2s;"><span class="bar-value">&gt; 440 M</span></div></div>
+                        <div class="bar-item"><span class="bar-label">Klarna</span><div class="bar" style="width: 15%; animation-delay: 0.3s;"><span class="bar-value">&gt; 150 M</span></div></div>
+                        <div class="bar-item"><span class="bar-label">Rakuten Bank</span><div class="bar" style="width: 13.6%; animation-delay: 0.4s;"><span class="bar-value">&gt; 136 M</span></div></div>
+                        <div class="bar-item"><span class="bar-label">Nu</span><div class="bar nu-bar" style="width: 12.4%; animation-delay: 0.5s;"><span class="bar-value">&gt; 124 M</span></div></div>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h2>La Empresa Hoy: Un Gigante Regional</h2>
+                    <div class="columns-container country-stats">
+                        <div class="column country-stat">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg" alt="Bandera de Brasil" class="flag-image">
+                            <h3>Brasil</h3>
+                            <p class="stat-number">107 M</p>
+                        </div>
+                        <div class="column country-stat">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg" alt="Bandera de México" class="flag-image">
+                            <h3>México</h3>
+                            <p class="stat-number">13 M</p>
+                        </div>
+                        <div class="column country-stat">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg" alt="Bandera de Colombia" class="flag-image">
+                            <h3>Colombia</h3>
+                            <p class="stat-number">4 M</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-section text-section">
+                    <h2>La Empresa en el Mundo</h2>
+                    <p><strong>Brasil:</strong> El origen y el corazón de Nubank. Actualmente atiende a más del 60% de la población adulta.</p>
+                    <p><strong>México:</strong> Se ha consolidado como el segundo mercado más importante y el motor de crecimiento más fuerte para la compañía fuera de Brasil.</p>
+                    <p><strong>Colombia:</strong> Es su mercado más nuevo, ya han superado los 4 millones de clientes y están en plena expansión.</p>
+                </div>
+
+                <div class="info-section">
+                    <h2>Crecimiento Exponencial de Nu en México</h2>
+                    <canvas id="mexicoGrowthChart"></canvas>
+                </div>
+
+                <div class="info-section">
+                    <h2>Más Allá de los Números: El Impacto Real</h2>
+                    <div class="columns-container impact-stats">
+                        <div class="column impact-item">
+                            <div class="donut-chart" style="--percentage: 50;">
+                                <span class="donut-label">50%</span>
+                            </div>
+                            <p>De los clientes obtuvieron su <strong>primera tarjeta de crédito</strong> con Nu.</p>
+                        </div>
+                        <div class="column impact-item">
+                            <div class="donut-chart" style="--percentage: 78;">
+                                <span class="donut-label">78%</span>
+                            </div>
+                            <p>De los nuevos clientes provienen de <strong>fuera de las grandes urbes</strong>.</p>
+                        </div>
+                        <div class="column impact-item">
+                            <div class="donut-chart" style="--percentage: 60;">
+                                <span class="donut-label">60%</span>
+                            </div>
+                            <p>De los clientes activos <strong>redujeron su uso de efectivo</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-section text-section">
+                    <h2>Futuro en México</h2>
+                    <ul>
+                        <li><strong>Nu 2025 y 2026:</strong> NuBank recibe licencia bancaria el 24 de abril 2025 y se esperá que sea banco oficialmente en 2026 después de completar la auditoría regulatoria de la CNBV.</li>
+                        <li><strong>Reconocimiento:</strong> Nu México alcanza el puesto 25 en Merco Talento 2025.</li>
+                    </ul>
+                </div>
             </div>
         </section>
 

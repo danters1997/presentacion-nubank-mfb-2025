@@ -239,6 +239,136 @@ main {
     border-color: transparent transparent var(--nu-dark-purple) transparent; /* Points up */
 }
 
+/* --- Panorama Section Styles --- */
+
+/* Horizontal Bar Chart */
+.bar-chart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+.bar-item {
+    display: grid;
+    grid-template-columns: 125px 1fr; /* Fixed label column, flexible bar column */
+    align-items: center;
+    gap: 1rem;
+}
+
+.bar-label {
+    text-align: right;
+    font-weight: 700;
+}
+
+.bar {
+    height: 2.5rem;
+    background-color: var(--background-color);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align text to the left */
+    padding-left: 1rem;
+    color: var(--text-color);
+    font-weight: 700;
+    animation: growBar 1s ease-out forwards;
+    transform-origin: left;
+}
+
+.nu-bar {
+    background-color: var(--nu-purple);
+}
+
+.bar-value {
+    opacity: 0;
+    animation: fadeIn 0.5s 0.8s ease-in forwards;
+    white-space: nowrap;
+}
+
+@keyframes growBar {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Country Stats */
+.country-stat {
+    text-align: center;
+}
+
+.flag-image {
+    width: 100px;
+    height: 70px; /* Fixed height for alignment */
+    object-fit: cover; /* Prevents image distortion */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+}
+
+.stat-number {
+    font-size: 4.2rem; /* Increased size again for more impact */
+    font-weight: 900;
+    color: var(--nu-purple);
+}
+
+/* Donut Charts */
+.impact-item {
+    text-align: center;
+}
+
+.donut-chart {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: conic-gradient(var(--nu-purple) 0% var(--percentage), var(--background-color) var(--percentage) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.5rem auto;
+    position: relative;
+}
+
+.donut-chart::before { /* The hole in the middle */
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    background: var(--card-background);
+    border-radius: 50%;
+}
+
+.donut-label {
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+.impact-item p {
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+/* Text Sections */
+.text-section p,
+.text-section li {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.text-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.text-section strong {
+    color: var(--nu-purple);
+}
+
 .main-footer-credits {
     text-align: center;
     padding: 2rem;
@@ -308,10 +438,10 @@ main {
     .timeline-tooltip {
         bottom: auto;
         top: 50%;
-        left: 5.5rem; /* Pushed to the right to not cover the year */
+        left: 6.5rem; /* Increased space from the year */
         transform: translateY(-50%);
         width: auto;
-        max-width: calc(100vw - 8rem); /* Prevent overflow */
+        max-width: calc(100vw - 9.5rem); /* Adjusted to prevent overflow */
         text-align: left;
     }
 
