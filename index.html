@@ -19,6 +19,7 @@
             <a href="#panorama">Panorama</a>
             <a href="#modelo">Modelo</a>
             <a href="#liderazgo">Liderazgo</a>
+            <a href="#cierre">Conclusiones</a>
         </nav>
         <div class="logo">
             <svg width="44" height="24" viewBox="0 0 58 32" xmlns="http://www.w3.org/2000/svg"><path fill="#820AD1" d="M10.4699 3.05246C12.304 1.12557 14.7369 0 17.5951 0C23.1632 0 26.8549 4.06542 27.5612 10.1557C27.7902 12.1335 27.7881 14.9219 27.7858 18.1516C27.7855 18.4828 27.7853 18.8187 27.7853 19.1588V31.2578H20.1281V22.309C20.1281 22.309 20.1125 14.6501 20.0657 13.2187C19.8602 6.98449 16.1695 3.06722 10.4691 3.06301C8.74925 4.88006 7.82773 7.10172 7.69183 10.4987C7.67315 10.9725 7.67785 12.6519 7.68404 14.8653C7.68725 16.0121 7.69086 17.3023 7.69183 18.6424C7.6975 24.4753 7.69183 31.2591 7.69183 31.2591H0.0346685V17.487C0.0346685 17.0151 0.0260685 16.5392 0.0174352 16.0614C6.75514e-05 15.1003 -0.0174352 14.1318 0.0346685 13.1728C0.121182 11.5741 0.397742 10.0025 1.14374 8.54252C2.85132 5.1978 6.35016 3.04426 10.0802 3.04426C10.2105 3.04426 10.3409 3.047 10.4699 3.05246Z"></path><path fill="#820AD1" d="M57.9653 18.8272C58.0174 17.8682 57.9999 16.8996 57.9826 15.9386C57.9739 15.4608 57.9653 14.9849 57.9653 14.513V0.740867H50.3082C50.3082 0.740867 50.3025 7.52467 50.3082 13.3575C50.3091 14.6976 50.3127 15.9877 50.3159 17.1345C50.3221 19.348 50.3268 21.0274 50.3082 21.5012C50.1723 24.8983 49.2507 27.1199 47.5309 28.937C41.8306 28.9327 38.14 25.0154 37.9344 18.7813C37.8876 17.3499 37.8678 13.7978 37.8678 9.68381V0.735023L30.2163 0.742173V12.8412C30.2163 13.1813 30.216 13.5171 30.2158 13.8484C30.2134 17.0781 30.2114 19.8664 30.4404 21.8443C31.1452 27.9346 34.8369 32 40.405 32C43.2633 32 45.6962 30.8744 47.5303 28.9475C47.6592 28.953 47.7895 28.9557 47.9198 28.9557C51.6498 28.9557 55.1487 26.8022 56.8563 23.4575C57.6023 21.9974 57.8788 20.4259 57.9653 18.8272Z"></path></svg>
@@ -207,23 +208,324 @@
             </div>
         </section>
 
-        <!-- Sección 3: El Modelo de Negocio y la Innovación -->
+        <!-- Sección 3: Modelo de Negocio -->
         <section id="modelo" class="content-section">
             <div class="card">
                 <span class="section-supertitle">Integrante 3</span>
                 <h1>El Modelo de Negocio y la Innovación</h1>
-                <p>Aquí va el contenido sobre el portafolio de productos (Cuenta Nu, Tarjeta), el rendimiento de la acción $NU, los factores de éxito y las estrategias de crecimiento.</p>
+
+                <div class="info-section">
+                    <h2>Portafolio de Productos</h2>
+                    <!-- Item 1: Tarjeta de Crédito -->
+                    <div class="product-item-detailed">
+                        <div class="product-item-image">
+                            <img src="tarjeta_nu.png" alt="Tarjeta de Crédito Nu">
+                        </div>
+                        <div class="product-item-text">
+                            <h3>Tarjeta de Crédito "La Moradita"</h3>
+                            <p>La icónica tarjeta sin anualidad, 100% digital y con beneficios Gold Mastercard. Ideal para iniciar o gestionar tu vida crediticia con transparencia y sin comisiones sorpresa.</p>
+                            <p><strong>También disponible:</strong> Tarjeta Garantizada Nu, para construir o reparar tu historial crediticio.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Cuenta y Ahorro -->
+                    <div class="product-item-detailed">
+                        <div class="product-item-image">
+                            <img src="cajitas_app.gif" alt="Cajitas Nu en la App">
+                        </div>
+                        <div class="product-item-text">
+                            <h3>Cuenta Nu y Cajitas de Ahorro</h3>
+                            <p>Una cuenta de débito que te da control total y una de las tasas de rendimiento más altas del mercado (15% anual) en tus ahorros guardados en las "Cajitas".</p>
+                            <p><strong>También disponible:</strong> Préstamos Personales Nu, con un proceso simple y transparente desde la app.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h2>Rendimiento en Bolsa ($NU)</h2>
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container" style="height:400px;width:100%; margin-top: 1.5rem;">
+                      <div id="tradingview_adv_chart"></div>
+                      <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                      <script type="text/javascript">
+                      new TradingView.widget(
+                      {
+                        "width": "100%",
+                        "height": 400,
+                        "symbol": "NYSE:NU",
+                        "interval": "D",
+                        "timezone": "Etc/UTC",
+                        "theme": "light",
+                        "style": "1",
+                        "locale": "es",
+                        "enable_publishing": false,
+                        "allow_symbol_change": true,
+                        "container_id": "tradingview_adv_chart"
+                      }
+                      );
+                      </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                </div>
+
+                <div class="info-section">
+                    <h2>Análisis Financiero y de Riesgo</h2>
+                    <style>
+                        .table-container { overflow-x: auto; -webkit-overflow-scrolling: touch; } /* Makes table scrollable on mobile */
+                        .styled-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; font-size: 0.9rem; }
+                        .styled-table th, .styled-table td { padding: 12px; border-bottom: 1px solid #eee; text-align: left; }
+                        .styled-table thead tr { background-color: #f8f8f8; }
+                        .styled-table tr.subheader { font-weight: bold; background-color: #f0f0f7; }
+                        .styled-table tbody tr:hover { background-color: #f5f5f5; }
+                    </style>
+                    <div class="table-container">
+                        <table class="styled-table">
+                        <thead>
+                            <tr><th>Categoría</th><th>Indicador</th><th>Unidad/Valor</th><th>Interpretación Clave</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Liquidez</td><td>Razón Corriente</td><td>1.33 veces</td><td>Cobertura sólida de pasivos a corto plazo.</td></tr>
+                            <tr><td>Liquidez</td><td>Razón de Efectivo</td><td>1.07 veces</td><td>Capacidad inmediata para cubrir obligaciones a corto plazo (liquidez muy alta).</td></tr>
+                            <tr><td>Solvencia</td><td>Razón Deuda/Capital (excl. Depósitos)</td><td>3.05 veces</td><td>Nivel de apalancamiento razonable para financiar la expansión crediticia.</td></tr>
+                            <tr><td>Rentabilidad</td><td>Margen de Ganancia Bruta</td><td>41.9 %</td><td>Alta eficiencia en la estructura de costos directos y costo de fondeo.</td></tr>
+                            <tr><td>Rentabilidad</td><td>ROE (Anualizado Aprox.)</td><td>21.3%</td><td>Rentabilidad excepcional sobre el capital de los accionistas, líder en la industria.</td></tr>
+                            <tr><td>Eficiencia</td><td>Razón de Eficiencia</td><td>23.7 %</td><td>Eficiencia operativa disruptiva, clave de su modelo digital de bajo costo.</td></tr>
+                            <tr><td>Eficiencia</td><td>ARPAC</td><td>12.2 USD/trimestre</td><td>Alto ingreso promedio por cliente (muestra la estrategia cross-sell).</td></tr>
+                            <tr><td>Eficiencia</td><td>Costo de Servicio</td><td>0.8 USD/trimestre</td><td>Costo de servir al cliente extremadamente bajo.</td></tr>
+                            <tr><td>Riesgo</td><td>NPL 90+ Días (Morosidad Tardía)</td><td>6.1 %</td><td>Morosidad estable y bajo control mediante su modelo de underwriting tecnológico.</td></tr>
+                            <tr><td>Riesgo</td><td>NPL 15-90 Días (Morosidad Temprana)</td><td>4.4 %</td><td>Indicador de riesgo futuro, consistente con su agresivo crecimiento en inclusión crediticia.</td></tr>
+                            <tr><td>Capital</td><td>Crecimiento de Patrimonio Neto (Y/Y)</td><td>3 %</td><td>El crecimiento es sostenido principalmente por la reinversión de utilidades.</td></tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h2>Resultados Consolidados</h2>
+                    <div class="table-container">
+                        <table class="styled-table">
+                        <thead><tr><th>Métrica</th><th>Q2'25</th><th>Q2'24</th><th>Q1'25</th></tr></thead>
+                        <tbody>
+                            <tr class="subheader"><td colspan="4">COMPANY FINANCIAL METRICS</td></tr>
+                            <tr><td>Revenue (in $ millions)</td><td>3,668.5</td><td>2,848.7</td><td>3,247.7</td></tr>
+                            <tr><td>Revenue growth (%)</td><td>29%</td><td>52%</td><td>19%</td></tr>
+                            <tr><td>Gross Profit (in $ millions)</td><td>1,548.0</td><td>1,359.4</td><td>1,319.5</td></tr>
+                            <tr><td>Gross Profit Margin (%)</td><td>42%</td><td>48%</td><td>41%</td></tr>
+                            <tr><td>Net Income (in $ millions)</td><td>637.0</td><td>487.3</td><td>557.2</td></tr>
+                            <tr><td>Adjusted Net Income (in $ millions)</td><td>694.5</td><td>562.5</td><td>606.5</td></tr>
+                            <tr class="subheader"><td colspan="4">FX NEUTRAL</td></tr>
+                            <tr><td>Revenue (in $ millions)</td><td>3,668.5</td><td>2,623.8</td><td>3,362.9</td></tr>
+                            <tr><td>Revenue growth (%)</td><td>40%</td><td>61%</td><td>40%</td></tr>
+                            <tr><td>Gross Profit (in $ millions)</td><td>1,548.0</td><td>1,252.11</td><td>1,362.9</td></tr>
+                            <tr><td>Net Income (in $ million)</td><td>637.0</td><td>448.8</td><td>576.5</td></tr>
+                            <tr><td>Adjusted Net Income (in $ millions)</td><td>694.51</td><td>518.1</td><td>626.5</td></tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <h2>Opciones para Retirar Efectivo</h2>
+                    <div class="oxxo-section">
+                        <div class="oxxo-text">
+                            <div class="table-container">
+                                <table class="styled-table">
+                                <thead><tr><th>Lugar</th><th>Comisión</th><th>Límite</th><th>Compra Mínima</th></tr></thead>
+                                <tbody>
+                                    <tr><td>Walmart</td><td>Varía</td><td>Hasta $2,000</td><td>$16.00</td></tr>
+                                    <tr><td>Chedraui</td><td>Varía</td><td>Hasta $2,000</td><td>$20.00</td></tr>
+                                    <tr><td>La Comer</td><td>Varía</td><td>Hasta $2,000</td><td>$50.00</td></tr>
+                                    <tr><td>Soriana</td><td>$10.00</td><td>Hasta $2,000</td><td>$20.00</td></tr>
+                                    <tr><td>Inbursa</td><td>$17.40</td><td>Hasta $8,000</td><td>N/A</td></tr>
+                                    <tr><td>OXXO</td><td>$20.00</td><td>N/A</td><td>N/A</td></tr>
+                                </tbody>
+                            </table>
+                            </div>
+                            <p style="margin-top: 1rem;"><strong>La Innovación de la Alianza:</strong> Nubank se asocia con Oxxo para ampliar la red de depósitos y retiros de efectivo. Los clientes pueden acceder a 22,000 tiendas Oxxo en todo el país. En total, los puntos físicos para retirar ascienden a más de 30,000.</p>
+                        </div>
+                        <div class="oxxo-image">
+                            <img src="oxxo_pay_logo.png" alt="Logo Oxxo Pay">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h2>El Modelo Disruptivo</h2>
+                    <div class="disruptive-model-grid">
+                        <div class="disruptive-item">
+                            <div class="disruptive-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                    <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                                </svg>
+                            </div>
+                            <h3>100% Digital</h3>
+                            <p>Sin sucursales físicas, enfocado en una experiencia sencilla, amigable y de bajo costo controlada desde la app.</p>
+                        </div>
+                        <div class="disruptive-item">
+                            <div class="disruptive-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M4 20H20V22H4V20ZM6 10H10V18H6V10ZM12 4H16V18H12V4ZM18 14H22V18H18V14Z"/>
+                                </svg>
+                            </div>
+                            <h3>Enfoque Tecnológico</h3>
+                            <p>Fuerte énfasis en tecnología, datos e interfaz de usuario para personalizar servicios y optimizar procesos.</p>
+                        </div>
+                        <div class="disruptive-item">
+                            <div class="disruptive-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383m.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z"/>
+                                </svg>
+                            </div>
+                            <h3>Infraestructura Flexible</h3>
+                            <p>Basada en la nube y microservicios, permitiendo escalar y lanzar nuevos productos con agilidad.</p>
+                        </div>
+                        <div class="disruptive-item">
+                            <div class="disruptive-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 8c.828 0 1.5-.895 1.5-2S8.828 4 8 4s-1.5.895-1.5 2S7.172 8 8 8"/>
+                                    <path d="M11.953 8.81c-.195-3.388-.968-5.507-1.777-6.819C9.707 1.233 9.23.751 8.857.454a3.5 3.5 0 0 0-.463-.315A2 2 0 0 0 8.25.064.55.55 0 0 0 8 0a.55.55 0 0 0-.266.073 2 2 0 0 0-.142.08 4 4 0 0 0-.459.33c-.37.308-.844.803-1.31 1.57-.805 1.322-1.577 3.433-1.774 6.756l-1.497 1.826-.004.005A2.5 2.5 0 0 0 2 12.202V15.5a.5.5 0 0 0 .9.3l1.125-1.5c.166-.222.42-.4.752-.57.214-.108.414-.192.625-.281l.198-.084c.7.428 1.55.635 2.4.635s1.7-.207 2.4-.635q.1.044.196.083c.213.09.413.174.627.282.332.17.586.348.752.57l1.125 1.5a.5.5 0 0 0 .9-.3v-3.298a2.5 2.5 0 0 0-.548-1.562zM12 10.445v.055c0 .866-.284 1.585-.75 2.14.146.064.292.13.425.199.39.197.8.46 1.1.86L13 14v-1.798a1.5 1.5 0 0 0-.327-.935zM4.75 12.64C4.284 12.085 4 11.366 4 10.5v-.054l-.673.82a1.5 1.5 0 0 0-.327.936V14l.225-.3c.3-.4.71-.664 1.1-.861.133-.068.279-.135.425-.199M8.009 1.073q.096.06.226.163c.284.226.683.621 1.09 1.28C10.137 3.836 11 6.237 11 10.5c0 .858-.374 1.48-.943 1.893C9.517 12.786 8.781 13 8 13s-1.517-.214-2.057-.607C5.373 11.979 5 11.358 5 10.5c0-4.182.86-6.586 1.677-7.928.409-.67.81-1.082 1.096-1.32q.136-.113.236-.18Z"/>
+                                    <path d="M9.479 14.361c-.48.093-.98.139-1.479.139s-.999-.046-1.479-.139L7.6 15.8a.5.5 0 0 0 .8 0z"/>
+                                </svg>
+                            </div>
+                            <h3>Ventaja Competitiva</h3>
+                            <p>Agilidad para superar la burocracia tradicional y ofrecer productos superiores, como su tarjeta de crédito sin comisiones.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-section text-section">
+                    <h2>Factores de Éxito</h2>
+                    <ul>
+                        <li>Construcción de plataforma multi-producto: no sólo tarjeta o cuenta, sino también préstamos, inversiones, seguros, etc. (cross-sell).</li>
+                        <li>Diseño de experiencia de usuario (UX) y marca "cool" que apela al cliente digital.</li>
+                        <li>Expansión geográfica ágil gracias a ser nativo digital (Brasil, México, Colombia).</li>
+                        <li>Uso de datos para mejorar los algoritalos de evaluación de riesgo y personalización, lo que reduce la morosidad y mejora la oferta.</li>
+                        <li>Ciclo virtuoso: Menores costos → mejores precios → más clientes → más datos → menores costos.</li>
+                        <li>Cultura organizacional fuerte: enfoque en el cliente, innovación y agilidad.</li>
+                    </ul>
+                </div>
+
+                <div class="info-section text-section">
+                    <h2>Estrategias de Crecimiento</h2>
+                    <div class="belinda-section">
+                        <div class="belinda-text">
+                            <p><strong>Brasil:</strong> Refuerza su marca con alianzas y marketing de estilo de vida, además de expandir su base de clientes a segmentos de mayor ingreso con productos como Nu Ultravioleta.</p>
+                            <p><strong>México:</strong> Promueve inclusión financiera y acceso al crédito en un mercado poco bancarizado, buscando convertirse en el banco principal para millones de mexicanos. Su éxito se basa en productos transparentes y fáciles de usar.</p>
+                            <p><strong>Colombia:</strong> Impulsa el crecimiento con referidos y campañas de expansión, aprovechando la infraestructura tecnológica y la experiencia de Brasil para replicar el modelo exitoso.</p>
+                            <p><strong>NPS (Net Promoter Score):</strong> Uno de sus pilares de crecimiento es la lealtad del cliente, medida por el NPS. Su NPS es del 89%, un indicador altísimo.</p>
+                            <details>
+                                <summary>¿Qué es el NPS?</summary>
+                                <p style="font-size: 0.9rem; margin-top: 0.5rem;"><strong>Detractores:</strong> Clientes que califican entre 0 y 6.<br><strong>Neutrales:</strong> Clientes que califican entre 7 y 8.<br><strong>Promotores:</strong> Clientes que califican entre 9 y 10.<br><strong>Fórmula:</strong> NPS = (Promotores - Detractores) / Total de encuestados.<br>Este alto NPS impulsa el crecimiento orgánico a través del boca a boca, reduciendo significativamente los costos de adquisición de clientes.</p>
+                            </details>
+                        </div>
+                        <div class="belinda-image">
+                            <img src="belinda_nu.jpg" alt="Belinda en campaña de Nubank">
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Sección 4: Liderazgo y Compromiso Corporativo -->
+        <!-- Sección 4: Liderazgo -->
         <section id="liderazgo" class="content-section">
             <div class="card">
                 <span class="section-supertitle">Integrante 4</span>
                 <h1>Liderazgo y Compromiso Corporativo</h1>
-                <p>Aquí va el contenido sobre la cultura empresarial, compromiso ESG, la visión del CEO David Vélez y el análisis del Grid Gerencial.</p>
+
+                <div class="info-section">
+                    <h2>La Cultura Nu: Valores Fundamentales</h2>
+                    <div class="values-section">
+                        <div class="values-text">
+                            <p><strong>PROPÓSITO CENTRAL:</strong> Combatir la complejidad para empoderar a las personas.</p>
+                            <p><strong>GRAN META (BHAG):</strong> Convertirnos en la empresa de servicios financieros más influyente del mundo.</p>
+                            <p><strong>VALORES CENTRALES:</strong></p>
+                            <ul>
+                                <li>Ser siempre joven, siempre hambriento.</li>
+                                <li>Transparencia y justicia para nuestra comunidad.</li>
+                                <li>Lo que es mejor para el cliente.</li>
+                                <li>Empoderamiento y responsabilidad.</li>
+                            </ul>
+                        </div>
+                        <div class="values-image">
+                            <img src="david_velez_vision.jpg" alt="David Vélez en una pizarra">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h2>Q&A sobre el Liderazgo de David Vélez</h2>
+                    <ul class="qa-list">
+                        <li><strong>Valores que guían sus acciones:</strong> Disparar alto, no tener miedo a fallar y una visión a largo plazo para crear valor para clientes y accionistas.</li>
+                        <li><strong>Ejemplo para otros:</strong> Éxito financiero combinado con filantropía (The Giving Pledge) y un liderazgo humano que inspira un impacto social positivo.</li>
+                        <li><strong>Visión del futuro:</strong> Lidera una "revolución inacabada" para la inclusión financiera total a través de la innovación constante en América Latina.</li>
+                        <li><strong>Inspiración:</strong> Su motor es un gran propósito enfocado en el impacto social y la creencia de que la tecnología puede democratizar las finanzas.</li>
+                        <li><strong>Construcción de equipo:</strong> Creación de la cultura desde el inicio, reclutamiento de alto nivel, fomento de la autonomía, la propiedad y la diversidad.</li>
+                        <li><strong>Celebración de éxitos:</strong> Usa los hitos clave y el reconocimiento externo como validación de su tesis y para comunicar la visión de un "juego infinito".</li>
+                    </ul>
+                </div>
+
+                <div class="info-section">
+                    <h2>Grid Gerencial: Estilo de Liderazgo</h2>
+                    <p>El liderazgo de Nubank, encabezado por David Vélez, se alinea con un estilo de <strong>Gestión de Equipo (9,9)</strong>. Hay un alto enfoque tanto en la consecución de objetivos y resultados (Orientación a la Tarea) como en el bienestar, empoderamiento y desarrollo de su gente (Orientación a las Personas). Esta combinación fomenta un ambiente de alto rendimiento, innovación y compromiso.</p>
+                    <div class="managerial-grid-wrapper">
+                        <div class="y-axis-title"><span>Orientación a las Personas</span></div>
+                        <div class="y-axis-labels">
+                            <span>9</span><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span>
+                        </div>
+                        <div class="leadership-grid">
+                            <div class="grid-face">
+                                <img src="david_velez_headshot.jpg" alt="Cara de David Velez">
+                            </div>
+                        </div>
+                        <div class="x-axis-labels">
+                            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                        </div>
+                        <div class="x-axis-title"><span>Orientación a la Tarea</span></div>
+                    </div>
+                </div>
+
+                <div class="info-section text-section">
+                    <h2>Cristina Junqueira: La Estratega del Crecimiento</h2>
+                    <ul>
+                        <li><strong>Cofundadora y Directora de Crecimiento:</strong> Es una de las mujeres más influyentes en el sector tecnológico y financiero de América Latina.</li>
+                        <li><strong>Experiencia Clave:</strong> Su profundo conocimiento del sector bancario brasileño (ex-Itaú) fue crucial para navegar la complejidad regulatoria y construir una oferta de productos sólida.</li>
+                        <li><strong>Visión de Crecimiento:</strong> Ha liderado la estrategia de expansión de productos y mercados de Nubank, impulsando la adopción masiva y la lealtad del cliente.</li>
+                        <li><strong>Reconocimientos:</strong> Nombrada en la lista de las 25 Mujeres Más Influyentes del Financial Times para 2024.</li>
+                        <li><strong>Formación:</strong> Tiene un MBA de la Kellogg School of Management.</li>
+                    </ul>
+                </div>
+
+                <div class="info-section">
+                    <h2>Charla de David Vélez en Stanford GSB</h2>
+                    <div class="local-video-container">
+                        <video controls preload="metadata" width="100%">
+                            <source src="video_nubank.mp4" type="video/mp4">
+                            Lo sentimos, tu navegador no soporta videos insertados.
+                        </video>
+                    </div>
+                    <div class="video-link-wrapper">
+                        <a href="https://www.youtube.com/watch?v=kUPi7aGbY3Y&t=1607s" target="_blank" class="video-link-button">
+                            Ver charla completa en YouTube (min 26:47)
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
+
+        <!-- Sección 5: Cierre -->
+        <section id="cierre" class="content-section">
+            <div class="card">
+                <span class="section-supertitle">Conclusiones del equipo</span>
+                <h1>Conclusión y Perspectiva Futura</h1>
+                <div class="info-section text-section">
+                    <p>Nubank ha ejecutado una de las disrupciones más notables en el sector de servicios financieros de América Latina. Al atacar un mercado caracterizado por la alta concentración, bajas tasas de bancarización y un servicio al cliente deficiente, Nu introdujo un modelo de negocio radicalmente diferente. Su crecimiento exponencial a más de 122 millones de clientes no es una casualidad, sino el resultado de una estrategia centrada en la simplicidad, la transparencia y una experiencia de usuario 100% digital que ha resonado profundamente en una población desatendida.</p>
+                    <p>La fortaleza del modelo de negocio de Nubank reside en su plataforma tecnológica nativa digital. Esto se traduce en una ventaja competitiva sostenible, evidenciada por una Razón de Eficiencia del 23.7%, cifra que la banca tradicional no puede igualar. Este bajo costo operativo le permite ofrecer productos sin comisiones, reinvertir en la experiencia del cliente y aun así lograr una rentabilidad sobre el capital (ROE) excepcional del 21.3%. El altísimo Net Promoter Score (NPS) de 89% no es solo una métrica de vanidad; es el motor de un ciclo virtuoso de crecimiento orgánico que reduce drásticamente los costos de adquisición y fortalece la marca.</p>
+                    <p>De cara al futuro, el potencial de Nubank sigue siendo inmenso, especialmente con la obtención de su licencia bancaria en México, su mercado de crecimiento más fuerte. Sin embargo, los retos también son significativos. La competencia de otras fintechs y la reacción de los bancos incumbentes se intensificará. El desafío principal será mantener la agilidad y la cultura organizacional centrada en el cliente que los fundadores inculcaron (un liderazgo de equipo 9,9) mientras la empresa escala a un tamaño aún mayor. La capacidad de continuar innovando en productos y expandiendo su ecosistema más allá del crédito será crucial para consolidarse como la plataforma financiera más influyente de la región.</p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer class="main-footer-credits">

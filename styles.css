@@ -369,6 +369,283 @@ main {
     color: var(--nu-purple);
 }
 
+/* --- Modelo Section Styles --- */
+
+/* New Product Section */
+.product-item-detailed {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+
+/* Alternating layout */
+.product-item-detailed:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.product-item-image {
+    flex: 1;
+    max-width: 400px;
+}
+
+.product-item-image img {
+    width: 100%;
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.product-item-text {
+    flex: 1.2;
+}
+
+.product-item-text h3 {
+    color: var(--nu-purple);
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.product-item-text p {
+    margin-bottom: 1rem;
+}
+
+
+/* Oxxo Section */
+.oxxo-section {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    /* margin-top is removed to allow default element spacing */
+}
+
+.oxxo-text {
+    flex: 1.5; /* Make text column narrower to increase space from image */
+}
+
+.oxxo-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0 0 0; /* User request: 2rem top margin, no other margins */
+}
+
+/* --- Liderazgo Section Styles --- */
+
+/* Values Section */
+.values-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+.values-text { flex: 1.5; }
+.values-text ul {
+    list-style-position: inside;
+    padding-left: 0.5rem;
+}
+.values-image { flex: 1; }
+.values-image img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* Q&A List */
+.qa-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+}
+.qa-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+.qa-list li::before {
+    content: '»';
+    color: var(--nu-purple);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Managerial Grid Refactor V2 */
+.managerial-grid-wrapper {
+    display: grid;
+    grid-template-areas:
+        "ytitle ylabels grid"
+        ". . xlabels"
+        ". . xtitle";
+    grid-template-columns: auto auto 1fr;
+    grid-template-rows: 1fr auto auto;
+    align-items: center;
+    gap: 0.5rem 0.5rem;
+    margin-top: 2rem;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.y-axis-title {
+    grid-area: ytitle;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    justify-self: center;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.x-axis-title {
+    grid-area: xtitle;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 0.5rem;
+}
+
+.y-axis-labels {
+    grid-area: ylabels;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    text-align: right;
+    font-size: 0.8rem;
+}
+
+.x-axis-labels {
+    grid-area: xlabels;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 0.8rem;
+}
+
+.leadership-grid {
+    grid-area: grid;
+    aspect-ratio: 1 / 1;
+    background-color: var(--nu-purple);
+    position: relative;
+    background-image: 
+        linear-gradient(rgba(255,255,255,0.2) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.2) 1px, transparent 1px);
+    background-size: calc(100% / 9) calc(100% / 9);
+    border: 1px solid var(--nu-dark-purple);
+}
+
+.grid-face {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% / 9 * 2); /* 2x2 size */
+    height: calc(100% / 9 * 2);
+    padding: 8px;
+}
+
+.grid-face img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+/* Local Video Player */
+.local-video-container {
+    margin-top: 1.5rem;
+    border-radius: 12px;
+    overflow: hidden; /* Ensures the video respects the border-radius */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    background-color: #000; /* Black background for letterboxing */
+}
+.local-video-container video {
+    width: 100%;
+    display: block; /* Removes any bottom space under the video */
+}
+.video-link-wrapper {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+.video-link-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--nu-purple);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+.video-link-button:hover {
+    background-color: var(--nu-dark-purple);
+}
+
+/* Disruptive Model Section */
+.disruptive-model-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+.disruptive-item {
+    background-color: var(--background-color);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.disruptive-icon {
+    color: var(--nu-purple);
+    margin-bottom: 1rem;
+}
+
+.disruptive-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.oxxo-image img {
+    max-width: 200px;
+    width: 100%;
+}
+
+/* Belinda Section */
+.belinda-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.belinda-text {
+    flex: 1;
+}
+
+.belinda-image {
+    flex: 1;
+}
+
+.belinda-image img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.belinda-text details {
+    margin-top: 1rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+}
+
+.belinda-text summary {
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--nu-purple);
+}
+
 .main-footer-credits {
     text-align: center;
     padding: 2rem;
@@ -450,5 +727,19 @@ main {
         left: -8px; /* Arrow on the left */
         transform: translateY(-50%);
         border-color: transparent var(--nu-dark-purple) transparent transparent;
+    }
+
+    /* Modelo Section Responsive */
+    .product-section, .oxxo-section, .belinda-section {
+        flex-direction: column;
+    }
+
+    .oxxo-section {
+        flex-direction: column-reverse; /* Puts image on top */
+    }
+
+    .product-images img {
+        max-width: 350px;
+        margin: 0 auto;
     }
 }
