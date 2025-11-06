@@ -207,7 +207,7 @@ main {
 
 .timeline-tooltip {
     position: absolute;
-    bottom: 150%;
+    top: 160%; /* Position below the event */
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--nu-dark-purple);
@@ -231,12 +231,12 @@ main {
 .timeline-tooltip::after {
     content: '';
     position: absolute;
-    top: 100%;
+    bottom: 100%; /* Arrow at the top of the tooltip */
     left: 50%;
     transform: translateX(-50%);
     border-width: 8px;
     border-style: solid;
-    border-color: var(--nu-dark-purple) transparent transparent transparent;
+    border-color: transparent transparent var(--nu-dark-purple) transparent; /* Points up */
 }
 
 .main-footer-credits {
@@ -273,6 +273,11 @@ main {
         font-size: 2rem;
     }
 
+    .columns-container {
+        flex-direction: column;
+        gap: 2rem; /* Increased gap for better separation */
+    }
+
     /* --- Vertical Timeline --- */
     .timeline-container {
         flex-direction: column;
@@ -281,7 +286,7 @@ main {
 
     .timeline-container::before {
         top: 0;
-        left: 9px; /* (20px dot + 4px border*2)/2 - 2px line width/2 */
+        left: 9px; /* Aligns with the center of the dot */
         width: 4px;
         height: 100%;
         transform: translateX(-50%);
@@ -291,6 +296,7 @@ main {
         flex-direction: row;
         align-items: center;
         margin-bottom: 2rem;
+        position: relative; /* Ensure tooltip is positioned relative to this */
     }
 
     .timeline-year {
@@ -302,13 +308,16 @@ main {
     .timeline-tooltip {
         bottom: auto;
         top: 50%;
-        left: 150%;
+        left: 5.5rem; /* Pushed to the right to not cover the year */
         transform: translateY(-50%);
+        width: auto;
+        max-width: calc(100vw - 8rem); /* Prevent overflow */
+        text-align: left;
     }
 
     .timeline-tooltip::after {
         top: 50%;
-        left: -8px;
+        left: -8px; /* Arrow on the left */
         transform: translateY(-50%);
         border-color: transparent var(--nu-dark-purple) transparent transparent;
     }
